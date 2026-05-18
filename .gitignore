@@ -1,0 +1,5 @@
+node_modules/
+figma-plugin/code.js.map
+figma-plugin/src/reference-images.ts
+figma-plugin/src/splash-image.ts
+.DS_Store

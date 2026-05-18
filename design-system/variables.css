@@ -1,0 +1,32 @@
+/* KAMYA Design Tokens — import into web/mobile projects */
+:root {
+  --kamya-navy: #060B2D;
+  --kamya-purple: #1C1240;
+  --kamya-gold: #D4AF37;
+  --kamya-amber: #F3C96A;
+  --kamya-cream: #E8E0D4;
+  --kamya-muted: #B8A88A;
+  --kamya-white: #FFFFFF;
+
+  --kamya-bg-gradient: linear-gradient(180deg, #060B2D 0%, #1C1240 50%, #0D0828 100%);
+  --kamya-gold-gradient: linear-gradient(135deg, #D4AF37, #F3C96A);
+  --kamya-glass: rgba(255, 255, 255, 0.06);
+  --kamya-glass-border: rgba(212, 175, 55, 0.35);
+
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 24px rgba(212, 175, 55, 0.25);
+}

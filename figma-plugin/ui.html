@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: linear-gradient(180deg, #060B2D, #1C1240);
+      color: #E8E0D4;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 18px;
+      color: #D4AF37;
+      margin-bottom: 4px;
+      letter-spacing: 2px;
+    }
+    .tagline { font-size: 10px; color: #B8A88A; margin-bottom: 16px; }
+    p { font-size: 12px; line-height: 1.5; margin-bottom: 16px; color: #E8E0D4; }
+    button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #D4AF37, #F3C96A);
+      color: #060B2D;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+    }
+    button:hover { opacity: 0.92; }
+    button:disabled { opacity: 0.5; cursor: wait; }
+    .status { font-size: 11px; margin-top: 12px; color: #F3C96A; min-height: 16px; }
+    ul { font-size: 11px; color: #B8A88A; margin-bottom: 16px; padding-left: 16px; }
+    li { margin-bottom: 4px; }
+  </style>
+</head>
+<body>
+  <h1>KAMYA</h1>
+  <div class="tagline">From Darkness To Divine Light</div>
+  <p>Generate the complete premium mobile UI kit, design system, and admin dashboard.</p>
+  <ul>
+    <li>Reference-inspired native UI (no PNG embed)</li>
+    <li>Design tokens & components</li>
+    <li>390×844 auto-layout frames</li>
+  </ul>
+  <button id="generate">Generate Full Design System</button>
+  <div class="status" id="status"></div>
+  <script>
+    document.getElementById('generate').onclick = () => {
+      document.getElementById('generate').disabled = true;
+      document.getElementById('status').textContent = 'Generating… this may take a minute.';
+      parent.postMessage({ pluginMessage: { type: 'generate' } }, '*');
+    };
+    onmessage = (e) => {
+      const msg = e.data.pluginMessage;
+      if (msg?.type === 'done') {
+        document.getElementById('status').textContent = msg.text;
+        document.getElementById('generate').disabled = false;
+      }
+      if (msg?.type === 'error') {
+        document.getElementById('status').textContent = 'Error: ' + msg.text;
+        document.getElementById('generate').disabled = false;
+      }
+    };
+  </script>
+</body>
+</html>
