@@ -4,11 +4,17 @@
 
 Complete mobile UI/UX design system and screen kit for **KAMYA** — a mystical, luxurious astrology and spiritual guidance platform.
 
+## Live preview (share with client)
+
+**https://cloudelixir.github.io/Kamya/**
+
+Enable once in GitHub: **Settings → Pages → Build from branch `main` → folder `/docs` → Save.**
+
 ## Design approach
 
 Your reference images are used **only as visual inspiration** — all screens are **rebuilt as native UI** (vectors, components, colors) in Figma and HTML. No reference PNGs are embedded.
 
-**Open in Figma:** See **[docs/OPEN-IN-FIGMA.md](docs/OPEN-IN-FIGMA.md)**
+**Open in Figma:** See **[documentation/OPEN-IN-FIGMA.md](documentation/OPEN-IN-FIGMA.md)**
 
 - Figma plugin generates editable frames (splash mandala, onboarding phones, login forms, home, drawer, etc.)
 - Browser preview: `prototype/index.html`
